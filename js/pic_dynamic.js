@@ -5,7 +5,7 @@ var imageModal = 0 ;
 function addImage() {
     for (i = 0; i < image.length; i++) {
         
-        $(".insertImagesHere").append(`<div id = "${image[i]}" class="imageContainer"><a href="#" class="" data-toggle="modal" data-target="#largeModal"><img class="imageStyle imageHover pointer"src= "${image[i]}" alt="${image[i]}"></a></div>`);
+        $(".insertImagesHere").append(`<div id="target" class=" col-3 imageContainer"><a href="#" class="" data-toggle="modal" data-target="#largeModal"><img class="imageStyle imageHover pointer"src= "${image[i]}" alt="${image[i]}"></a></div>`);
         var imageNumber = i;
        
 }
