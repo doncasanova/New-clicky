@@ -6,24 +6,26 @@
 console.log("hello your in the image count js");
 let imageArray = [];
 let newArray = [];
+let losses = 0
 
 $(document).on("click", ".imageStyle", function () {
 
     var imageModal = $(this).attr('src');
-    imageArray.push(imageModal)
-    //var imageModalName = imageModal.substr(9).slice(0, -4);
-    console.log(imageArray)
-    var findImage = imageArray.find(function (imageModal) {
-        console.log("find image " + findImage)
-        if (findImage == imageModal) {
-            console.log("image found")
-        } else {
-          imageArray.push(imageModal)
+    var findImage = $.inArray(imageModal, imageArray)
 
-           $(".test").append(`<p> ${imageArray[1]} </p>`);
+        if (findImage == -1) {
+            imageArray.push(imageModal)
+
+            $(".test").append(`<p> ${imageArray[1]} </p>`);
             console.log("length " + imageArray.length)
+        } else {
+          
+            console.log("image found")
+            losses++
+            $("#loss").empty();
+            $("#loss").append(`<p>Losses: ${losses}</p>`);
         }
 
-    });
+   
    
 });
