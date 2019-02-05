@@ -1,28 +1,31 @@
 
-var counter = 0
+//click counter
+$(document).ready(function () {
+    var count = 0;
+    var wins = 0;
+    $("#wins").empty();
+    $("#wins").append(`<p>Wins: ${wins}</p>`);
 
+    $(document).on("click", ".imageStyle", function () {
+      
+        count++
+        if (count == 10) {
+            count = 0
+            $("#other").empty();
+            $("#other").append(`<p>Count: ${count}</p>`);
+            //wins counter
+            wins ++
+            $("#wins").empty();
+            $("#wins").append(`<p>Count: ${wins}</p>`);
 
+        } else {
+            $("#other").empty();
+            $("#other").append(`<p>Count: ${count}</p>`);
 
-//$("#target")
-//    .data('counter', 0) // begin counter at zero
-//    .click(function () {
-//        var counter = $(this).data('counter'); // get
-//        $(this).data('counter', counter + 1); // set
-//        // do something else...
-//        console.log(counter)
-//        addClick(counter)
-//    });
+        }
+            
+        
+    });
 
-function addClick(counter) {
-    $("#other").empty();
-    $("#other").append(`<p>Count: ${ counter}</p>`);
-       
-}
-
-$(document).on("click", "#target", function (counter) {
- 
-    var counter = counter + 1
-    
-    console.log(counter)
-    addClick(counter)
 });
+//--------------------------------------------------------
