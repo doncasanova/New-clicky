@@ -3,7 +3,6 @@
 //if it hasent been added we add it and then add a count to the total number clicked
 //if it has been added we add a count to the losses and then reset game
 
-console.log("hello your in the image count js");
 let imageArray = [];
 let newArray = [];
 let losses = 0
@@ -24,6 +23,11 @@ $(document).on("click", ".imageStyle", function () {
             losses++
             $("#loss").empty();
             $("#loss").append(`<p>Losses: ${losses}</p>`);
+           
+            imageArray.length = 0
+            $("#other").empty();
+            const count = 0
+            $("#other").append(`<p>Count: ${count}</p>`);
         }
 
    

@@ -7,25 +7,24 @@ $(document).ready(function () {
     $("#wins").append(`<p>Wins: ${wins}</p>`);
 
     $(document).on("click", ".imageStyle", function () {
-      
         count++
         if (count == 10) {
             count = 0
             $("#other").empty();
             $("#other").append(`<p>Count: ${count}</p>`);
             //wins counter
-            wins ++
+            wins++
             $("#wins").empty();
-            $("#wins").append(`<p>Count: ${wins}</p>`);
+            $("#wins").append(`<p>Wins: ${wins}</p>`);
 
         } else {
             $("#other").empty();
             $("#other").append(`<p>Count: ${count}</p>`);
 
         }
-            
-        
     });
-
 });
 //--------------------------------------------------------
+    
+       
+
