@@ -2,17 +2,19 @@
 //when the image is clicked we iterate through the array to check to see if its all ready been added
 //if it hasent been added we add it and then add a count to the total number clicked
 //if it has been added we add a count to the losses and then reset game
-
+var image = ["./images/dixie.jpg", "./images/dixie on a bird.jpg", "./images/food turkey 068.JPG", "./images/skiing.jpg", "./images/SnarlingWolf.jpg"];
 let imageArray = [];
 let losses = 0
 let count = 0
 let wins = 0
 
+
+
 $(document).on("click", ".imageStyle", function () {
 
     var imageModal = $(this).attr('src');
     var findImage = $.inArray(imageModal, imageArray)
-
+   
         if (findImage == -1) {
             imageArray.push(imageModal)
             count = imageArray.length
@@ -40,5 +42,7 @@ $(document).on("click", ".imageStyle", function () {
             const count = 0
             $("#count").append(`<p>Count: ${count}</p>`);
     }
-  
+   
+   
 });
+
