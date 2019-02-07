@@ -4,8 +4,9 @@
 //if it has been added we add a count to the losses and then reset game
 
 let imageArray = [];
-let newArray = [];
 let losses = 0
+let count = 0
+let wins = 0
 
 $(document).on("click", ".imageStyle", function () {
 
@@ -14,22 +15,30 @@ $(document).on("click", ".imageStyle", function () {
 
         if (findImage == -1) {
             imageArray.push(imageModal)
+            count = imageArray.length
+            if (count == 5) {
+                //clear imageArray and add to wins then clears counts
+                imageArray.length = 0
+                count = 0
+                $("#count").empty();
+                $("#count").append(`<p>Count: ${count}</p>`);
+                //wins counter
+                wins++
+                $("#wins").empty();
+                $("#wins").append(`<p>Wins: ${wins}</p>`);
 
-            $(".test").append(`<p> ${imageArray[1]} </p>`);
-            console.log("length " + imageArray.length)
+            } else {
+                $("#count").empty();
+                $("#count").append(`<p>Count: ${count}</p>`);
+            }
         } else {
-          
-            console.log("image found")
             losses++
             $("#loss").empty();
             $("#loss").append(`<p>Losses: ${losses}</p>`);
-           
             imageArray.length = 0
-            $("#other").empty();
+            $("#count").empty();
             const count = 0
-            $("#other").append(`<p>Count: ${count}</p>`);
-        }
-
-   
-   
+            $("#count").append(`<p>Count: ${count}</p>`);
+    }
+  
 });
