@@ -55,7 +55,7 @@ function winningStrokes() {
         clicks = 0
     }
     console.log(clicks)
-    $(".instructions").append(`<h5>
+    $(".instructions").append(`<h5 class "text-light"> 
     ${doingWell[clicks]}
         </h5>`);
     clicks++
