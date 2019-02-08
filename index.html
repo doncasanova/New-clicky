@@ -9,15 +9,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div id="count">
-        <!--Trigger the handler-->
-    </div>
-    <div id="wins">
-        <!--Trigger the handler-->
-    </div>
-    <div id="loss">
-        <!--Trigger the handler-->
-    </div>
+ 
 
     <p>Press mouse and release here.</p>
 
@@ -43,11 +35,22 @@
             </div>
         </div>
     </div>
+    <nav class="navbar navbar-light bg-dark sticky-top">
+        <span class="navbar-brand mb-0 h1 text-light">Clicky Game</span>
+        <ul>
+            <li id="count" class="card-text list-inline-item navbar-nav text-light"></li>
+            <li id="wins" class="card-text list-inline-item navbar-nav text-light"></li>
+            <li id="loss" class="card-text list-inline-item navbar-nav text-light"></li>
+        </ul>
+    </nav>
+    <div class="jumbotron text-center">
+        <h5>
+            The object of this game is to click every image without clicking on it twice. If you click it twice the game will reset and a loss will be added to your count. If you click them all once you win and a win will be added to your count. Hope you enjoy testing your memory.
+        </h5>
+    </div>
     <jumbotron>
-        <div class="row"></div>
-        <div class=" col-3 insertImagesHere">
+        <div class="row insertImagesHere d-flex justify-content-center"></div>
 
-        </div>
     </jumbotron>
 
     <script src="js/pic_count.js"></script>

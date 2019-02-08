@@ -23,24 +23,24 @@ $(document).on("click", ".imageStyle", function () {
                 imageArray.length = 0
                 count = 0
                 $("#count").empty();
-                $("#count").append(`<p>Count: ${count}</p>`);
+                $("#count").append(`<p class "text-light">Clicky Count: ${count}</p>`);
                 //wins counter
                 wins++
                 $("#wins").empty();
-                $("#wins").append(`<p>Wins: ${wins}</p>`);
+                $("#wins").append(`<p class "text-light">Clicky Wins: ${wins}</p>`);
 
             } else {
                 $("#count").empty();
-                $("#count").append(`<p>Count: ${count}</p>`);
+                $("#count").append(`<p class "text-light">Clicky Count: ${count}</p>`);
             }
         } else {
             losses++
             $("#loss").empty();
-            $("#loss").append(`<p>Losses: ${losses}</p>`);
+            $("#loss").append(`<p class "text-light">Clicky Losses: ${losses}</p>`);
             imageArray.length = 0
             $("#count").empty();
             const count = 0
-            $("#count").append(`<p>Count: ${count}</p>`);
+            $("#count").append(`<p class "text-light">Clicky Count: ${count}</p>`);
     }
    
    
