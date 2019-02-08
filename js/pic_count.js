@@ -3,7 +3,7 @@
 //if it hasent been added we add it and then add a count to the total number clicked
 //if it has been added we add a count to the losses and then reset game
 var image = ["./images/dixie.jpg", "./images/dixie on a bird.jpg", "./images/food turkey 068.JPG", "./images/skiing.jpg", "./images/SnarlingWolf.jpg"];
-var doingWell = ["Your doing great", "Your on your way to a win", "Wow keep it going", "getting close", "You Won...Yeah!","Sorry, lets try again,"]
+var doingWell = ["Your doing great.", "Your on your way to a win.", "Wow keep it going.", "Getting closer.", "You Won...Yeah!","Sorry, lets try again."]
 var clicks = 0
 let imageArray = [];
 let losses = 0
@@ -51,7 +51,10 @@ $(document).on("click", ".imageStyle", function () {
 });
 
 function winningStrokes() {
-    console.log("in strokes")
+    if (clicks == 6) {
+        clicks = 0
+    }
+    console.log(clicks)
     $(".instructions").append(`<h5>
     ${doingWell[clicks]}
         </h5>`);
