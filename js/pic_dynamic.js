@@ -7,7 +7,7 @@ function addImage() {
     image.sort(function (a, b) { return 0.5 - Math.random() });
     for (i = 0; i < image.length; i++) {
      
-        $(".insertImagesHere").append(`<div id="target" class=" col-2 imageContainer"><a href="#" class="" data-toggle="modal" data-target="#largeModal"><img class="imageStyle imageHover pointer"src= "${image[i]}" alt="${image[i]}" height="300" ></a></div>`);
+        $(".insertImagesHere").append(`<div id="target" class=" imageContainer"><a href="#" class="" data-toggle="modal" data-target="#largeModal"><img class="imageStyle imageHover pointer"src= "${image[i]}" alt="${image[i]}" height="300" ></a></div>`);
         var imageNumber = i;
        
 }
