@@ -25,7 +25,7 @@ $(document).on("click", ".imageStyle", function () {
                 //clear imageArray and add to wins then clears counts
                 imageArray.length = 0
                 count = imageArray.length
-                clicks = 0
+                
                 $("#count").empty();
                 $("#count").append(`<p class "text-light">Clicky Count: ${count}</p>`);
                 //wins counter
@@ -55,13 +55,15 @@ $(document).on("click", ".imageStyle", function () {
 });
 
 function winningStrokes() {
-    if (clicks === 5) {
-        clicks = 0
-    }
+    
     console.log(clicks)
     $(".instructions").append(`<h5 class "text-light"> 
     ${doingWell[clicks]}
         </h5>`);
+    if (clicks === 5) {
+        console.log("in the if statment")
+        clicks = -1
+    }
    
     clicks++
 }
