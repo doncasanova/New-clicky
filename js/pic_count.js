@@ -24,13 +24,15 @@ $(document).on("click", ".imageStyle", function () {
             if (count == 5) {
                 //clear imageArray and add to wins then clears counts
                 imageArray.length = 0
-                count = 0
+                count = imageArray.length
+                clicks = 0
                 $("#count").empty();
                 $("#count").append(`<p class "text-light">Clicky Count: ${count}</p>`);
                 //wins counter
                 wins++
                 $("#wins").empty();
                 $("#wins").append(`<p class "text-light">Clicky Wins: ${wins}</p>`);
+               
 
             } else {
                 $("#count").empty();
@@ -38,25 +40,28 @@ $(document).on("click", ".imageStyle", function () {
             }
         } else {
             losses++
+           
             $("#loss").empty();
             $("#loss").append(`<p class "text-light">Clicky Losses: ${losses}</p>`);
             imageArray.length = 0
             $("#count").empty();
-            const count = 0
+            var count = 0
             $("#count").append(`<p class "text-light">Clicky Count: ${count}</p>`);
-            clicks=5
+            clicks = 5
+           
     }
    
    
 });
 
 function winningStrokes() {
-    if (clicks == 6) {
+    if (clicks === 5) {
         clicks = 0
     }
     console.log(clicks)
     $(".instructions").append(`<h5 class "text-light"> 
     ${doingWell[clicks]}
         </h5>`);
+   
     clicks++
 }
