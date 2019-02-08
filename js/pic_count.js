@@ -4,16 +4,16 @@
 //if it has been added we add a count to the losses and then reset game
 var image = ["./images/dixie.jpg", "./images/dixie on a bird.jpg", "./images/food turkey 068.JPG", "./images/skiing.jpg", "./images/SnarlingWolf.jpg"];
 var doingWell = ["Your doing great.", "Your on your way to a win.", "Wow keep it going.", "Getting closer.", "You Won...Yeah!","Sorry, lets try again."]
-var clicks = 0
+var clicks = -1
 let imageArray = [];
 let losses = 0
 let count = 0
 let wins = 0
 
 
-
 $(document).on("click", ".imageStyle", function () {
-
+    $(".instructions").empty();
+    winningStrokes()
     var imageModal = $(this).attr('src');
     var findImage = $.inArray(imageModal, imageArray)
    
@@ -30,6 +30,7 @@ $(document).on("click", ".imageStyle", function () {
                 $("#count").append(`<p class "text-light">Clicky Count: ${count}</p>`);
                 //wins counter
                 wins++
+               
                 $("#wins").empty();
                 $("#wins").append(`<p class "text-light">Clicky Wins: ${wins}</p>`);
                
@@ -47,7 +48,7 @@ $(document).on("click", ".imageStyle", function () {
             $("#count").empty();
             var count = 0
             $("#count").append(`<p class "text-light">Clicky Count: ${count}</p>`);
-            clicks = 5
+           
            
     }
    
@@ -56,7 +57,7 @@ $(document).on("click", ".imageStyle", function () {
 
 function winningStrokes() {
     
-    console.log(clicks)
+    
     $(".instructions").append(`<h5 class "text-light"> 
     ${doingWell[clicks]}
         </h5>`);
@@ -66,4 +67,5 @@ function winningStrokes() {
     }
    
     clicks++
+    console.log(clicks)
 }

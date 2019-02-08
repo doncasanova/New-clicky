@@ -15,8 +15,7 @@ function addImage() {
 }
 
 $(document).on("click", ".imageStyle", function (image) {
-    $(".instructions").empty();
-    winningStrokes()
+   
     $(".insertImagesHere").empty();
     addImage();
 });
