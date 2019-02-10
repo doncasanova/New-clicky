@@ -1,4 +1,4 @@
-var image = ["BalloonFestLasers2.jpg", "BalloonFestLasers3.jpg", "CATlasers.JPG", "clublasers1.jpg", "clublasers2.jpg", "EDCvegasLasers.jpg", "EDMlasers1.jpg", "EDMlasers2.jpg", "EDMlasers3.jpg", "SpaceNeedleLasers.jpg"];
+var image = ["BalloonFestLasers2.jpg", "BalloonFestLasers3.jpg", "CATlasers.jpg", "clublasers1.jpg", "clublasers2.jpg", "EDCvegasLasers.jpg", "EDMlasers1.jpg", "EDMlasers2.jpg", "EDMlasers3.jpg", "SpaceNeedleLasers.jpg"];
 var path = "./images/";
 
 addInstructions();
